@@ -34,10 +34,10 @@ class MyDrawable:
 
         # Example of drawing a quad
         # ac.glBegin(acsys.GL.Quads)
-        # ac.glVertex2f(x,y)
-        # ac.glVertex2f(x,y)
-        # ac.glVertex2f(x,y)
-        # ac.glVertex2f(x,y)
+        # ac.glVertex2f(x1,y1)
+        # ac.glVertex2f(x2,y2)
+        # ac.glVertex2f(x3,y3)
+        # ac.glVertex2f(x4,y4)
         # ac.glEnd()        
 
 
