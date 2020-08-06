@@ -137,7 +137,7 @@ class ACLabel:
         """
         ac.setFontColor(self.id, color[0], color[1], color[2], color[3])
 
-    def set_visible(self, visible)
+    def set_visible(self, visible):
         """Set label visibility on or off.
 
         Args:
