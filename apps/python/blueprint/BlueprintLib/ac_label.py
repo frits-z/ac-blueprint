@@ -136,3 +136,16 @@ class ACLabel:
             color (tuple): r,g,b,a on a 0-1 scale.
         """
         ac.setFontColor(self.id, color[0], color[1], color[2], color[3])
+
+    def set_visible(self, visible)
+        """Set label visibility on or off.
+
+        Args:
+            visible (bool): True to set visible, false to hide.
+
+        When hidden, the label doesn't get rendered and costs no performance.
+        """
+        if visible:
+            ac.set_visible(self.id, 1)
+        else:
+            ac.set_visible(self.id, 0)        

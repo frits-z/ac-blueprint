@@ -11,9 +11,17 @@ The modules include
 * Text Labels
 * Data (Session and Car)
 
-## Assetto Corsa Python App Development Notes
+## Python apps in Assetto Corsa
 
-Below are all the quirks of Assetto Corsa python app development I know about.
+A short explanation of how it works... `acMain`, `acUpdate` etcetera. 
+
+## Blueprint workflow
+
+Explanation of how its set up. Session class, within the session there are cars etc. Config, appwindow, aclabel, ac_gl_utils etc.
+
+## Development Notes
+
+This is a collection of quirks and other things I ran into when developing apps for Assetto Corsa, things that are useful to know about.
 
 ### Modules
 
@@ -33,7 +41,7 @@ Therefore, the following directory tree structure is followed.
     └── stdlib64
 ```
 
-### Graphics Drawing 
+### Graphics Drawing: Backface culling
 
 When drawing a quad or a triangle using the `ac.gl` functions, make sure to specify the vertices in counter clockwise order. That is the winding order as seen from the center of the triangle (or quad). The winding order implies the front face and the back face of the triangle. To save performance, by default the back face is culled (not rendered). So the front face must be facing the correct way.
 
@@ -47,6 +55,14 @@ B---C
 ```
 The vertices A, B and C should be specified in the order of A -> B -> C. 
 
+### Graphics Drawing: Geometry rotation
+
+When using trigonometry to rotate a shape you are drawing, remember that the greater the y (height), the lower on the app window. It is like an inverted y-axis. This makes normal trigonometry functions that rotate positive angle in counterclockwise direction, work in clockwise direction.
+
 ### Fonts
 
 Issues with different font 'weights'. For example, Roboto has 100 (Thin), 300 (Light), ..., 900 (Black). By default no support for this. Only regular and bold. To workaround, made a custom font for each weight of Roboto. Shipped in the `content/fonts` folder.
+
+### Text
+
+Drawing a lot of different text labels is costly for performance.
