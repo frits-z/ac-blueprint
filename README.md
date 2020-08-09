@@ -66,3 +66,18 @@ Issues with different font 'weights'. For example, Roboto has 100 (Thin), 300 (L
 ### Text
 
 Drawing a lot of different text labels is costly for performance.
+
+
+### Data
+
+#### Wind
+
+The terminology Assetto Corsa uses for wind direction is wrong. Usually, the wind direction points to where the wind is coming from, in Assetto Corsa it points to where the wind is going.
+
+#### Coordinates System
+
+Assetto Corsa follows the convention of OpenGL in 3D graphics regarding the X,Y,Z coordinates system: it uses a right-handed system. Positive rotation is counterclockwise about the axis of rotation.
+
+* The x-axis indicates longitude: the distance east (positive) or west (negative) from the origin point.
+* The z-axis indicates latitude: the distance south (positive) or north (negative) from the origin point.
+* The y-axis indicates elevation: the distance up (positive) or down (negative) from the origin point.
